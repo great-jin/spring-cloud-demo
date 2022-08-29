@@ -1,2 +1,15 @@
 server:
   port: 9091
+
+spring:
+  application:
+    name: eureka-client
+  cloud:
+    consul:
+      host: localhost
+      port: 9190
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka/
