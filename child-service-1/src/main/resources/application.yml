@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: eureka-client
+    name: child-service-1
   cloud:
     consul:
       host: localhost

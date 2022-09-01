@@ -9,13 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>xyz.ibudai</groupId>
-    <artifactId>service-1</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>demo-1</name>
-    <description>demo-1</description>
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <artifactId>child-service-1</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>

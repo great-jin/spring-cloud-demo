@@ -1,0 +1,11 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: child-service-2
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka/

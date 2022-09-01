@@ -10,9 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>service-1</module>
-        <module>service-2</module>
         <module>eureka-service</module>
+        <module>child-service-1</module>
+        <module>child-service-2</module>
     </modules>
 
     <properties>
