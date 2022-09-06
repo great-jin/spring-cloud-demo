@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>xyz.ibudai</groupId>
-	<artifactId>child-service-2</artifactId>
+	<artifactId>consumer-basic</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
 	<dependencies>
@@ -20,6 +20,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Spring Boot健康监控 -->
+		<!-- 控制台会输出一系列 Mapped 信息 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

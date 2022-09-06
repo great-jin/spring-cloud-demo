@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/service1")
 public class TestController {
 
     @Autowired
     DiscoveryClient discoveryClient;
 
+    /**
+     * 打印出服务实例的相关内容
+     */
     @GetMapping("/dc")
     public String dcService() {
         String services = "Services: " + discoveryClient.getServices();

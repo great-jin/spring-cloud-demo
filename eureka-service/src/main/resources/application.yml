@@ -10,6 +10,8 @@ eureka:
     hostname: localhost
   client:
     register-with-eureka: false
+    # 禁用默认的客户端注册行为
     fetch-registry: false
     serviceUrl:
+      # 自定义服务注册中心地址
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
