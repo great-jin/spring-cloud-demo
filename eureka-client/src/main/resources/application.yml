@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: child-service-1
+    name: client-1
   cloud:
     consul:
       host: localhost

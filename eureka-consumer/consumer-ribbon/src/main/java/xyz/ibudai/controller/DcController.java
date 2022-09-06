@@ -16,21 +16,11 @@ public class DcController {
     private RestTemplate restTemplate;
 
     /**
-     * Spring Cloud 原生负载均衡客户端
-     */
-    @Autowired
-    private LoadBalancerClient loadBalancerClient;
-
-    /**
      * 消费者 consumer-1 通过服务中心请求 client-1 接口
      */
     @GetMapping("/consumer")
     public String dc() {
-        ServiceInstance serviceInstance = loadBalancerClient.choose("client-1");
-        String url = "http://" + serviceInstance.getHost() + ":"
-                + serviceInstance.getPort()
-                + "api/service1/dc";
-        System.out.println(url);
-        return restTemplate.getForObject(url, String.class);
+        return restTemplate.getForObject("http://client-1/api/service1/dc",
+                String.class);
     }
 }

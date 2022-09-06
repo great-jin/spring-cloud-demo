@@ -1,9 +1,9 @@
 server:
-  port: 9092
+  port: 9093
 
 spring:
   application:
-    name: consumer-1
+    name: consumer-2
 
 eureka:
   client:
