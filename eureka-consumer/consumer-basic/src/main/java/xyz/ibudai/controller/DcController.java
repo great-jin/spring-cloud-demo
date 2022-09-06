@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("api/service2")
+@RequestMapping("api/consumer1")
 public class DcController {
 
     @Autowired
@@ -24,12 +24,12 @@ public class DcController {
     /**
      * 消费者 consumer-1 通过服务中心请求 client-1 接口
      */
-    @GetMapping("/consumer")
+    @GetMapping("/get")
     public String dc() {
         ServiceInstance serviceInstance = loadBalancerClient.choose("client-1");
         String url = "http://" + serviceInstance.getHost() + ":"
                 + serviceInstance.getPort()
-                + "api/service1/dc";
+                + "api/client1/dc";
         System.out.println(url);
         return restTemplate.getForObject(url, String.class);
     }
