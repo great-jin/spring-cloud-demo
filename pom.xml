@@ -16,8 +16,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>eureka-service</module>
-        <module>eureka-client</module>
+        <module>eureka-register</module>
         <module>eureka-consumer</module>
         <module>eureka-config</module>
         <module>eureka-gateway</module>
