@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>xyz.ibudai</groupId>
-        <artifactId>spring-micro</artifactId>
+        <artifactId>microservice-eureka</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
