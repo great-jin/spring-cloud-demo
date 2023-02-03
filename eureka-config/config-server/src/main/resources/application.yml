@@ -8,4 +8,4 @@ spring:
     config:
       server:
         git:
-          uri: http://git.oschina.net/didispace/config-repo-demo/
+          uri: https://github.com/great-jin/eureka-config

@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/client1")
-public class TestController {
+@RequestMapping("api/client")
+public class ClientController {
 
     @Autowired
     DiscoveryClient discoveryClient;

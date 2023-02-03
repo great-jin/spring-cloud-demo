@@ -2,12 +2,11 @@ package xyz.ibudai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
-@SpringBootApplication
 // 开启 Spring Cloud Config 服务端功能
 @EnableConfigServer
+@SpringBootApplication
 public class ConfigServerApplication {
 
     public static void main(String[] args) {
