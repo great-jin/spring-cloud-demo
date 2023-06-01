@@ -15,11 +15,11 @@ public class ClientController {
 
     /**
      * 打印出服务实例的相关内容
+     * <p>
+     * Services: [clint-1, client-2]
      */
     @GetMapping("/dc")
-    public String dcService() {
-        String services = "Services: " + discoveryClient.getServices();
-        System.out.println(services);
-        return services;
+    public String getServices() {
+        return "Services: " + discoveryClient.getServices();
     }
 }

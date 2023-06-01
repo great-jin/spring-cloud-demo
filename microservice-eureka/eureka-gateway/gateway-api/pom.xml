@@ -8,7 +8,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>consumer-ribbon</artifactId>
+    <artifactId>gateway-api</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,16 +19,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
-        <!-- Spring Boot健康监控 -->
-        <!-- 控制台会输出一系列 Mapped 信息 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!-- ribbon 消费	-->
+        <!-- Gateway server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
     </dependencies>
 

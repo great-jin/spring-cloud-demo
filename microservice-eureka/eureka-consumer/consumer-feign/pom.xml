@@ -8,7 +8,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>consumer-ribbon</artifactId>
+    <artifactId>consumer-feign</artifactId>
 
     <dependencies>
         <dependency>
@@ -25,10 +25,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!-- ribbon 消费	-->
+        <!-- feign 消费 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
     </dependencies>
 

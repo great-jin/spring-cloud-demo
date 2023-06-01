@@ -18,9 +18,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
-            <!-- 提供服务发现和服务配置的工具 -->
-            <!--<artifactId>spring-cloud-starter-consul-discovery</artifactId>-->
         </dependency>
+        <!-- 提供服务发现和服务配置的工具 -->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        </dependency>-->
     </dependencies>
 
     <build>

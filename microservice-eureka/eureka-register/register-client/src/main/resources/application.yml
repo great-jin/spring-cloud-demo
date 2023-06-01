@@ -5,6 +5,7 @@ spring:
   application:
     name: client-1
   cloud:
+    # Monitor console
     consul:
       host: localhost
       port: 9190

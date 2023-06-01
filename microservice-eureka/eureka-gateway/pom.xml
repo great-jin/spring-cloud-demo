@@ -10,5 +10,9 @@
     </parent>
 
     <artifactId>eureka-gateway</artifactId>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>gateway-api</module>
+    </modules>
 </project>

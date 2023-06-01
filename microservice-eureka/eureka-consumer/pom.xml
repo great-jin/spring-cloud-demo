@@ -15,5 +15,6 @@
     <modules>
         <module>consumer-basic</module>
         <module>consumer-ribbon</module>
+        <module>consumer-feign</module>
     </modules>
 </project>

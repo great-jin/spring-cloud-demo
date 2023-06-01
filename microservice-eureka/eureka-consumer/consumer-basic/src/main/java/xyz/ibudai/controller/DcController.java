@@ -23,17 +23,22 @@ public class DcController {
 
     /**
      * 消费者通过服务中心请求 client 接口
+     * <p>
+     * client-1: /api/client/dc
      */
     @GetMapping("/get")
     public String dc() {
         // 通过负载均衡选择客户端实例
         ServiceInstance serviceInstance = loadBalancerClient.choose("client-1");
         // 根据选择的实例拼接请求地址
-        String url = "http://" + serviceInstance.getHost() + ":"
-                + serviceInstance.getPort()
-                + "/api/client/dc";
-        System.out.println("Basic consumer url: " + url);
+        StringBuilder builder = new StringBuilder();
+        builder.append("http://")
+                .append(serviceInstance.getHost())
+                .append(":")
+                .append(serviceInstance.getPort())
+                .append("/api/client/dc");
         // 通过 restTemplate 调用服务接口
+        String url = builder.toString();
         return restTemplate.getForObject(url, String.class);
     }
 }

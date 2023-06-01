@@ -11,6 +11,7 @@
 
     <artifactId>eureka-register</artifactId>
     <packaging>pom</packaging>
+    <description>The register demo, client register to service.</description>
 
     <modules>
         <module>register-client</module>
