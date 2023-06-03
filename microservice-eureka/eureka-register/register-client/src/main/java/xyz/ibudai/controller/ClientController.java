@@ -18,7 +18,7 @@ public class ClientController {
      * <p>
      * Services: [clint-1, client-2]
      */
-    @GetMapping("/dc")
+    @GetMapping("/getServices")
     public String getServices() {
         return "Services: " + discoveryClient.getServices();
     }

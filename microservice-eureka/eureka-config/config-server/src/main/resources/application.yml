@@ -1,5 +1,5 @@
 server:
-  port: 9094
+  port: 9096
 
 spring:
   application:
@@ -8,4 +8,6 @@ spring:
     config:
       server:
         git:
+          # http://localhost:9096/config-client/default/main
           uri: https://github.com/great-jin/eureka-config
+          skip-ssl-validation: true

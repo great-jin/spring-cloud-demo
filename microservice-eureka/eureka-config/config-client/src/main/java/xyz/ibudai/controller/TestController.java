@@ -1,7 +1,6 @@
 package xyz.ibudai.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,16 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/config/client")
 public class TestController {
 
-    @Autowired
-    DiscoveryClient discoveryClient;
+    @Value("${ibudai.name:default}")
+    private String name;
 
-    /**
-     * 打印出服务实例的相关内容
-     */
-    @GetMapping("/dc")
-    public String dcService() {
-        String services = "Services: " + discoveryClient.getServices();
-        System.out.println(services);
-        return services;
+    @GetMapping("/getInfo")
+    public String getInfo() {
+        return name;
     }
 }
