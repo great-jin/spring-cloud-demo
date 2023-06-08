@@ -1,0 +1,22 @@
+server:
+  port: 8093
+
+spring:
+#  <application-name>-dev.yml
+#  profiles:
+#    active: DEV
+  application:
+    # Compare to nacos "Data Id"
+    name: nacos-config
+  cloud:
+    nacos:
+      # namespace, use id not name
+      namespace: 551af254-cf22-4486-9d80-d576a99e7c7d
+      # Compare to nacos "Group", default: "DEFAULT_GROUP"
+      group: DEFAULT_GROUP
+      config:
+        username: nacos
+        password: nacos
+        # suffix, default: properties
+        file-extension: yml
+        server-addr: 127.0.0.1:8848

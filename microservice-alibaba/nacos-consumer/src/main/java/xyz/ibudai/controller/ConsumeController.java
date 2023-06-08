@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("api/client")
-public class ClientController {
+public class ConsumeController {
 
     @Autowired
     LoadBalancerClient loadBalancerClient;

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: nacos-client-1
+    name: nacos-client
   cloud:
     nacos:
       discovery:
