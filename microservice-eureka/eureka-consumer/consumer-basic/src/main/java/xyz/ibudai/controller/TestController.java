@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("api/basic/consumer")
-public class DcController {
+public class TestController {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -36,7 +36,7 @@ public class DcController {
                 .append(serviceInstance.getHost())
                 .append(":")
                 .append(serviceInstance.getPort())
-                .append("/api/client/dc");
+                .append("/api/client/getServices");
         // 通过 restTemplate 调用服务接口
         String url = builder.toString();
         return restTemplate.getForObject(url, String.class);
