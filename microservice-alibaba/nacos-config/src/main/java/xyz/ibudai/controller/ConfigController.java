@@ -9,11 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/config")
 public class ConfigController {
 
-    @Value("${info.name}")
-    private String name;
+    @Value("${common.name}")
+    private String commonName;
 
-    @GetMapping("/demo")
-    public String demo() {
-        return name;
+    @Value("${config.name}")
+    private String configName;
+
+    @GetMapping("/config")
+    public String getConfigName() {
+        return configName;
+    }
+
+    @GetMapping("/common")
+    public String getCommonName() {
+        return commonName;
     }
 }
