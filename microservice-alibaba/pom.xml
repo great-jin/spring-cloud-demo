@@ -19,6 +19,8 @@
         <module>nacos-client</module>
         <module>nacos-consumer</module>
         <module>nacos-config</module>
+        <module>nacos-feign</module>
+        <module>nacos-gateway</module>
     </modules>
 
     <dependencyManagement>
