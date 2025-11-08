@@ -10,9 +10,30 @@
     </parent>
 
     <artifactId>eureka-hystrix</artifactId>
-    <packaging>pom</packaging>
 
-    <modules>
-        <module>hystrix-demotion</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <!-- Spring Boot健康监控 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!-- feign 消费 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <!-- hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+    </dependencies>
 </project>
