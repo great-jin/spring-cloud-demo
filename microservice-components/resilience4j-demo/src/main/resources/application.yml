@@ -1,0 +1,57 @@
+resilience4j:
+  # 重试
+  retry:
+    instances:
+      test-retry:
+        # 最大尝试次数，包含首次
+        max-attempts: 3
+        # 每次尝试间隔事件
+        wait-duration: 1s
+
+  # 请求限制
+  ratelimiter:
+    instances:
+      test-limiter:
+        # 周期内请求次数上线
+        limit-for-period: 5
+        # 周期时间
+        limit-refresh-period: 1s
+        # 上限后等待时间
+        timeout-duration: 0s
+
+  # 并发限制
+  bulkhead:
+    instances:
+      test-bulkhead:
+        # 同时允许的最大并发线程数
+        max-concurrent-calls: 2
+        # 超过并发后最多等待时间（0 表示立即失败）
+        max-wait-duration: 500ms
+
+  # 并发线程池
+  thread-pool-bulkhead:
+    instances:
+      test-thread-pool:
+        # 最大线程池线程数
+        max-thread-pool-size: 3
+        # 核心线程数
+        core-thread-pool-size: 2
+        # 队列容量
+        queue-capacity: 10
+
+  # 服务熔断
+  circuitbreaker:
+    instances:
+      test-breaker:
+        # 熔断器开启的最小请求数
+        sliding-window-size: 10
+        # 失败率阈值（百分比）
+        failure-rate-threshold: 50
+        # 熔断器从开启到半开的等待时间（秒）
+        wait-duration-in-openState: 5s
+        # 需记录异常
+        record-exceptions:
+          - java.io.IOException
+        # 需跳过的异常
+        ignore-exceptions:
+          - java.lang.IllegalAccessException
